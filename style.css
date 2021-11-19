@@ -1,0 +1,31 @@
+body {
+  margin-top: 5%;
+  text-align: center;
+  background: rgb(124, 81, 159);
+  background: radial-gradient(
+    circle,
+    rgba(124, 81, 159, 1) 0%,
+    rgba(18, 17, 17, 1) 100%
+  );
+  background-attachment: fixed;
+}
+
+h1 {
+  font-family: Impact, fantasy;
+  font-stretch: ultra-expanded;
+  color: rgb(230, 200, 230);
+}
+
+table {
+  font-size: 50px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+td {
+  border: 1px solid black;
+}
+.timer {
+  align-content: center;
+}
