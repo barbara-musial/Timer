@@ -28,69 +28,32 @@
         style="display: none"
         class="edit-desc-button edb-0"
       /><br />
-      <input type="number" min="0" max="24" class="hours h-0" />
+      <input type="number" min="0" max="24" value="0" class="hours h-0" />
       <label> H </label>
-      <input type="number" min="0" max="59" class="minutes m-0" />
+      <input type="number" min="0" max="59" value="0" class="minutes m-0" />
       <label> M </label>
-      <input type="number" min="0" max="59" class="seconds s-0" />
+      <input type="number" min="0" max="59" value="0" class="seconds s-0" />
       <label> S </label><br />
-      <input type="button" value="SET" class="set-button sb-0" />
+      <input
+        type="button"
+        value="SET"
+        onclick="setTimer(0)"
+        style="display: inline"
+        class="set-button sb-0"
+      />
+      <input
+        type="button"
+        value="PAUSE"
+        style="display: none"
+        class="pause-button pb-0"
+      />
+      <input
+        type="button"
+        value="DELETE"
+        style="display: none"
+        class="delete-button db-0"
+      />
     </form>
-    <br />
-    <div class="timer t-1">
-      <form>
-        <input
-          type="text"
-          placeholder="Set description (optional)"
-          style="display: inline"
-          class="desc-change dc-1"
-        />
-        <input
-          type="button"
-          value="✔"
-          onclick="changeDescription(1)"
-          style="display: inline"
-          class="desc-change-button dcb-1"
-        />
-        <label style="display: none" class="description d-1"></label>
-        <input
-          type="button"
-          value="✍"
-          onclick="changeDescription(1)"
-          style="display: none"
-          class="edit-desc-button edb-1"
-        />
-      </form>
-      <br />
-      <table>
-        <tr>
-          <td class="hours h-1">00</td>
-          <td>H</td>
-          <td class="minutes m-1">00</td>
-          <td>M</td>
-          <td class="seconds s-1">00</td>
-          <td>S</td>
-        </tr>
-        <tr>
-          <td>
-            <button>+</button>
-            <button>-</button>
-          </td>
-          <td></td>
-          <td>
-            <button>+</button>
-            <button>-</button>
-          </td>
-          <td></td>
-          <td>
-            <button>+</button>
-            <button>-</button>
-          </td>
-          <td></td>
-        </tr>
-      </table>
-      <button class="set-button sb-1">SET</button>
-    </div>
     <br />
     <button id="addTimerButton">➕</button>
     <script src="script.js"></script>
