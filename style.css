@@ -29,3 +29,15 @@ td {
 .timer {
   align-content: center;
 }
+
+.hours {
+  text-align: right;
+}
+
+.minutes {
+  text-align: right;
+}
+
+.seconds {
+  text-align: right;
+}
