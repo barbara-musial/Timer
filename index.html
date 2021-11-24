@@ -5,7 +5,12 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Set your timer:</h1>
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/850/850960.png"
+      alt="timer-img"
+    />
+    <h1>Set your timer</h1>
+
     <form class="timer t-0">
       <input
         type="text"
@@ -28,11 +33,11 @@
         style="display: none"
         class="edit-desc-button edb-0"
       /><br />
-      <input type="number" min="0" max="24" value="0" class="hours h-0" />
+      <input type="number" min="0" max="24" value="0" class="h-0" />
       <label> H </label>
-      <input type="number" min="0" max="59" value="0" class="minutes m-0" />
+      <input type="number" min="0" max="59" value="0" class="m-0" />
       <label> M </label>
-      <input type="number" min="0" max="59" value="0" class="seconds s-0" />
+      <input type="number" min="0" max="59" value="0" class="s-0" />
       <label> S </label><br />
       <input
         type="button"
@@ -45,24 +50,24 @@
         type="button"
         value="PAUSE"
         style="display: none"
-        class="pause-button pb-0"
+        class="act-buttons pb-0"
       />
       <input
         type="button"
         value="RESUME"
         style="display: none"
-        class="resume-button rb-0"
+        class="act-buttons rb-0"
       />
       <input
         type="button"
         value="DELETE"
         onclick="deleteTimer(0)"
         style="display: none"
-        class="delete-button db-0"
+        class="act-buttons db-0"
       />
     </form>
     <br />
-    <button id="addTimerButton">➕</button>
+    <button id="addTimerButton">+</button>
     <script src="script.js"></script>
   </body>
 </html>
