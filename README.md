@@ -1,2 +1,3 @@
 # Timer
-Simple timer
+⏲Simple timer⏲
+![](timer.gif)
