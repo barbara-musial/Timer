@@ -10,54 +10,7 @@
       alt="timer-img"
     />
     <h1>Set your timer</h1>
-    <div class="timers">
-      <form class="timer">
-        <input
-          type="text"
-          placeholder="Set description (optional)"
-          style="display: inline"
-          class="desc-change"
-        />
-        <label style="display: none" class="description"></label>
-        <input
-          type="button"
-          value="✍"
-          style="display: none"
-          class="edit-desc-button"
-        /><br />
-        <input type="number" min="0" max="24" value="0" class="hours" />
-        <label> H </label>
-        <input type="number" min="0" max="59" value="0" class="minutes" />
-        <label> M </label>
-        <input type="number" min="0" max="59" value="0" class="seconds" />
-        <label> S </label><br />
-        <input
-          type="button"
-          value="SET"
-          style="display: inline"
-          class="set-button"
-        />
-        <input
-          type="button"
-          value="PAUSE"
-          style="display: none"
-          class="pause-button"
-        />
-        <input
-          type="button"
-          value="RESUME"
-          style="display: none"
-          class="resume-button"
-        />
-        <input
-          type="button"
-          value="DELETE"
-          style="display: none"
-          class="delete-button"
-        />
-      </form>
-    </div>
-
+    <div class="timers"></div>
     <button id="addTimerButton">+</button>
     <script src="script.js"></script>
   </body>
