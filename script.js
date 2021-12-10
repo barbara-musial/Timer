@@ -12,11 +12,7 @@ class Timer {
     this.id = id;
 
     // Call immediately (AFTER pressing SET button):
-    this._setDOMElements()
-      ._setDescription()
-      ._displayTimersButtons()
-      ._calcTimeInSec()
-      ._setInterval();
+    this._setDOMElements()._calcTimeInSec()._startTimer();
 
     //Event handlers
     this.editDescButton.addEventListener(
@@ -55,32 +51,30 @@ class Timer {
     return this;
   }
 
-  _setInterval() {
-    this.interval = window.setInterval(this._interval.bind(this), 1000);
+  _startTimer() {
+    if (this.time > 0) {
+      this._displayTimersButtons()._setDescription();
 
-    this.hours.setAttribute("readonly", true);
-    this.minutes.setAttribute("readonly", true);
-    this.seconds.setAttribute("readonly", true);
+      this.hours.setAttribute("readonly", true);
+      this.minutes.setAttribute("readonly", true);
+      this.seconds.setAttribute("readonly", true);
 
-    if (
-      this.hours.value === "0" &&
-      this.minutes.value === "0" &&
-      this.seconds.value === "0"
-    ) {
-      window.clearInterval(this.interval);
+      this._setInterval();
     }
   }
 
+  _setInterval() {
+    this.interval = window.setInterval(this._interval.bind(this), 1000);
+  }
+
   _interval() {
-    if (this.time > 0) {
-      console.log(this.time);
-      this.time--;
-      this.hours.value = Math.trunc(this.time / 3600);
-      this.minutes.value = Math.trunc(
-        this.time / (60 * (Number(this.hours.value) + 1))
-      );
-      this.seconds.value = this.time % 60;
-    }
+    this.time--;
+    this.hours.value = Math.trunc(this.time / 3600);
+    this.minutes.value = Math.trunc(
+      this.time / (60 * (Number(this.hours.value) + 1))
+    );
+    this.seconds.value = this.time % 60;
+    if (this.time === 0) window.clearInterval(this.interval);
   }
 
   _setDescription() {
@@ -112,7 +106,6 @@ class Timer {
   }
 
   _calcTimeInSec() {
-    console.log(this.hours.value, this.minutes.value, this.seconds.value);
     this.time = +(
       Number(this.hours.value) * 60 * 60 +
       Number(this.minutes.value * 60) +
@@ -152,7 +145,6 @@ class Timer {
 }
 
 // FUNCTIONS
-
 function addNewTimer() {
   idArr.push(count);
   const id = idArr[count];
