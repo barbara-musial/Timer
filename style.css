@@ -1,71 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap");
 
+:root {
+  --main-color: #009dae;
+  --second-color: #c2fff9;
+  --third-color: #71dfe7;
+  --fourth-color: #ffe652;
+
+  --main-font: "Roboto Condensed", sans-serif;
+}
+
 body {
+  background-color: var(--second-color);
   text-align: center;
-  background-color: #c2fff9;
 }
 
 h1 {
-  margin: 50px auto;
-  font-family: "Roboto Condensed", sans-serif;
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  color: var(--fourth-color);
   font-size: 3em;
-  color: #ffe652;
-  background-color: #009dae;
+  margin: 50px auto;
   width: 80%;
   cursor: default;
 }
 
 img {
-  width: 10rem;
   position: absolute;
-  left: 9rem;
+  width: 10rem;
   top: 0.5rem;
+  left: 9rem;
 }
 
 /* Description */
-
 .desc-change {
-  height: 20.8px;
-  width: 240px;
-  padding: 5px;
-  color: #009dae;
-  font-family: "Roboto Condensed", sans-serif;
+  background-color: var(--second-color);
+  border: 3px solid var(--third-color);
+  border-radius: 150px;
+  font-family: var(--main-font);
+  color: var(--main-color);
   font-size: 15px;
   font-weight: bold;
-  border: 3px solid #71dfe7;
-  border-radius: 150px;
-  background-color: #c2fff9;
-  outline: none;
   margin-bottom: 20px;
+  padding: 5px;
+  height: 20.8px;
+  width: 240px;
+  outline: none;
 }
 
 .desc-change:focus {
-  border: 4px solid #71dfe7;
+  border: 4px solid var(--third-color);
 }
 
 ::placeholder {
-  color: #009dae;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--main-font);
+  color: var(--main-color);
   font-size: 15px;
   font-weight: 100;
 }
 
 .description {
+  font-family: var(--main-font);
   color: #009dae;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 25px;
   font-weight: bold;
 }
 
 /* Desription buttons */
 .desc-change-button {
-  height: 36.8px;
-  width: 36.8px;
-  margin-left: 10px;
-  color: #71dfe7;
-  background-color: #009dae;
+  background-color: var(--main-color);
   border: 0;
   border-radius: 20px;
+  color: var(--third-color);
+  margin-left: 10px;
+  height: 36.8px;
+  width: 36.8px;
   opacity: 0.6;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -76,15 +84,15 @@ img {
 }
 
 .edit-desc-button {
-  height: 25px;
-  width: 25px;
-  margin-left: 10px;
-  color: #71dfe7;
-  background-color: #009dae;
+  background-color: var(--main-color);
   border: 0;
   border-radius: 20px;
-  opacity: 0.6;
+  color: var(--third-color);
+  margin-left: 10px;
   padding: 0;
+  height: 25px;
+  width: 25px;
+  opacity: 0.6;
   cursor: pointer;
   transition-duration: 0.4s;
 }
@@ -94,41 +102,40 @@ img {
 }
 
 /* Timer values */
-
 label {
-  color: #009dae;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--main-font);
+  color: var(--main-color);
   font-size: 35px;
   font-weight: normal;
 }
 
 input[type="number"] {
-  width: 100px;
-  color: #009dae;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 70px;
-  background-color: #c2fff9;
+  background-color: var(--second-color);
   border: 0;
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 70px;
   text-align: right;
-  outline: none;
-  padding-right: 5px;
-  cursor: default;
   margin-top: 20px;
+  padding-right: 5px;
+  width: 100px;
+  outline: none;
+  cursor: default;
 }
 
 /* Set button */
 .set-button {
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 50px;
+  font-family: var(--main-font);
+  color: var(--second-color);
+  font-size: 30px;
+  font-weight: bolder;
   margin-top: 30px;
   margin-bottom: 40px;
   height: 50px;
   width: 100px;
-  color: #c2fff9;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 30px;
-  font-weight: bolder;
-  border-radius: 50px;
-  border: 0;
-  background-color: #009dae;
   opacity: 0.6;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -140,18 +147,18 @@ input[type="number"] {
 
 /* Pause, resume and delete buttons */
 .timerButton {
+  background-color: var(--main-color);
+  border: 0;
+  border-radius: 50px;
+  font-family: var(--main-font);
+  color: var(--second-color);
+  font-size: 20px;
+  font-weight: bolder;
   margin-top: 30px;
   margin-right: 10px;
   margin-bottom: 40px;
   height: 40px;
   width: 80px;
-  color: #c2fff9;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 20px;
-  font-weight: bolder;
-  border-radius: 50px;
-  border: 0;
-  background-color: #009dae;
   opacity: 0.6;
   cursor: pointer;
   transition-duration: 0.4s;
@@ -160,26 +167,27 @@ input[type="number"] {
   opacity: 1;
 }
 
-/* Add task button */
+/* Add timer button */
 #addTimerButton {
-  height: 40px;
-  width: 40px;
-  color: #c2fff9;
+  background-color: var(--fourth-color);
+  border: 0;
+  border-radius: 20px;
+  color: var(--second-color);
   font-size: 30px;
   font-weight: bold;
   padding: 5px;
-  border: 0;
-  border-radius: 20px;
-  background-color: #ffe652;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   transition-duration: 0.5s;
 }
 
 #addTimerButton:hover {
-  background-color: #c2fff9;
-  color: #ffe652;
+  background-color: var(--second-color);
+  color: var(--fourth-color);
 }
 
+/* Other */
 .hidden {
   display: none;
 }
