@@ -139,9 +139,7 @@ input[type="number"] {
 }
 
 /* Pause, resume and delete buttons */
-.pause,
-.resume,
-.delete {
+.timerButton {
   margin-top: 30px;
   margin-right: 10px;
   margin-bottom: 40px;
@@ -158,9 +156,7 @@ input[type="number"] {
   cursor: pointer;
   transition-duration: 0.4s;
 }
-.pause,
-.resume,
-.delete:hover {
+.timerButton:hover {
   opacity: 1;
 }
 
@@ -182,4 +178,8 @@ input[type="number"] {
 #addTimerButton:hover {
   background-color: #c2fff9;
   color: #ffe652;
+}
+
+.hidden {
+  display: none;
 }
