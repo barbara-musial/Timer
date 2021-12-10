@@ -6,7 +6,6 @@ const addNewTimerFormButton = document.querySelector("#addTimerButton");
 const idArr = [];
 let count = 0;
 
-// CLASS
 class Timer {
   constructor(id) {
     this.id = id;
@@ -144,7 +143,6 @@ class Timer {
   }
 }
 
-// FUNCTIONS
 function addNewTimer() {
   idArr.push(count);
   const id = idArr[count];
@@ -177,5 +175,4 @@ function addNewTimer() {
 }
 addNewTimer();
 
-// EVENT HANDLERS
 addNewTimerFormButton.addEventListener("click", addNewTimer);
